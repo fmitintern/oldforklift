@@ -1,0 +1,107 @@
+/* Full-page container */
+.requester-dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
+/* Card container */
+.dashboard-container {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title */
+.dashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Subtext */
+.dashboard-subtext {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* 🏆 Increased spacing between buttons */
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* ⬆️ Increased from 20px to 30px */
+}
+
+/* Buttons */
+.button {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Fixed Ride Button */
+.fixed-ride {
+  background: #007bff;
+}
+
+.fixed-ride:hover {
+  background: #0056b3;
+}
+
+/* Special Task Ride Button */
+.special-task {
+  background: #28a745;
+}
+
+.special-task:hover {
+  background: #218838;
+}
+
+/* Responsive Fix */
+@media (max-width: 400px) {
+  .dashboard-container {
+    padding: 40px 30px;
+    max-width: 320px;
+  }
+
+  .dashboard-title {
+    font-size: 20px;
+  }
+
+  .dashboard-subtext {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .button-wrapper {
+    gap: 25px; /* ⬆️ Increased for mobile too */
+  }
+}

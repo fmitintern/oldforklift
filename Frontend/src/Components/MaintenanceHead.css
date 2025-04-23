@@ -1,0 +1,62 @@
+.maintenance-head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Moves welcome text to the top */
+  height: 100vh;
+  background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding-top: 50px; /* Adds spacing from the top */
+}
+
+/* Welcome Message */
+.welcome-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 50px; /* Increased space between title and buttons */
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the buttons in the page */
+}
+
+/* Common Button Style */
+.button {
+  width: 220px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Reports Button */
+.reports-button {
+  background: #007bff;
+}
+
+.reports-button:hover {
+  background: #0056b3;
+}
+
+/* Requests Button */
+.requests-button {
+  background: #28a745;
+}
+
+.requests-button:hover {
+  background: #218838;
+}

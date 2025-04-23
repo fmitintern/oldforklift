@@ -1,0 +1,747 @@
+/* AvailableRides.css - Updated Version */
+.available-rides-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  box-sizing: border-box;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.header-decoration {
+  height: 4px;
+  width: 100px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  margin: 15px auto 0;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #64748b;
+  margin-bottom: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Form Styles */
+.booking-form {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 10px;
+  text-align: left;
+  letter-spacing: 0.3px;
+}
+
+/* Location Input Styles */
+.location-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+  padding: 0 12px;
+}
+
+.location-input-container:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  background-color: white;
+}
+
+.location-input-icon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-search-input {
+  flex: 1;
+  padding: 14px 0;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: #1e293b;
+  outline: none;
+  font-family: inherit;
+}
+
+.location-search-input:disabled {
+  background-color: transparent;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.clear-location-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: color 0.2s;
+}
+
+.clear-location-button:hover {
+  color: #ef4444;
+}
+
+/* Location Dropdown */
+.location-dropdown {
+  position: absolute;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  margin-top: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.location-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.location-dropdown-item:hover {
+  background-color: #f8fafc;
+}
+
+.location-icon {
+  margin-right: 12px;
+  color: #64748b;
+}
+
+.location-text {
+  font-size: 15px;
+  color: #1e293b;
+}
+
+/* Estimated Time */
+.estimated-time-card {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #f0f9ff;
+  border-radius: 12px;
+  margin: 25px 0;
+  border-left: 4px solid #3b82f6;
+}
+
+.time-icon {
+  margin-right: 16px;
+  color: #3b82f6;
+}
+
+.time-details {
+  flex: 1;
+}
+
+.time-label {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.time-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Buttons */
+.confirm-button {
+  margin-top: 20px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.confirm-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+}
+
+.confirm-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.confirm-button.disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Ride Status */
+.ride-status {
+  margin-top: 30px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 16px;
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.ride-status.success {
+  background-color: #f0fdf4;
+  border-left: 4px solid #10b981;
+}
+
+.ride-status.info {
+  background-color: #f0f9ff;
+  border-left: 4px solid #3b82f6;
+}
+
+.status-icon {
+  margin-bottom: 20px;
+}
+
+.ride-status h3 {
+  font-size: 20px;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.ride-status p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.status-note {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 15px;
+}
+
+.ride-status.success p {
+  color: #065f46;
+}
+
+.ride-status.info p {
+  color: #1e40af;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(59, 130, 246, 0.1);
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px auto;
+}
+
+.redirect-notice {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Confirmation Dialog */
+.confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.confirmation-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.confirmation-icon {
+  margin-bottom: 20px;
+}
+
+.confirmation-box h3 {
+  font-size: 22px;
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.confirmation-box p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.confirmation-box p strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+.confirmation-buttons button {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  flex: 1;
+  max-width: 180px;
+}
+
+.yes-button {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.yes-button:hover {
+  background: linear-gradient(135deg, #059669, #10b981);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+}
+
+.no-button {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.no-button:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+/* Ride Progress Tracker */
+.ride-progress-tracker {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border: 1px solid #e2e8f0;
+}
+
+.ride-progress-tracker h3 {
+  font-size: 18px;
+  color: #1e293b;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.progress-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 0 20px;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.progress-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.progress-circle.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.progress-circle.completed {
+  background-color: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+.progress-title {
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+  max-width: 80px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.progress-title.active {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.progress-connector {
+  flex: 1;
+  height: 3px;
+  background-color: #e2e8f0;
+  margin: 0 -10px;
+  position: relative;
+  top: -12px;
+}
+
+.progress-connector.active {
+  background-color: #10b981;
+}
+
+/* Action Buttons */
+.action-buttons {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.history-button {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3b82f6;
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.history-button:hover {
+  background-color: #e0f2fe;
+  transform: translateY(-1px);
+}
+
+.history-button.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.history-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Ride History */
+.ride-history-container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border: 1px solid #e2e8f0;
+}
+
+.ride-history-container h3 {
+  font-size: 18px;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.history-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-item:hover {
+  background-color: #f8fafc;
+}
+
+.history-route {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.from-location {
+  color: #3b82f6;
+}
+
+.to-location {
+  color: #ef4444;
+}
+
+.history-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.history-time {
+  background-color: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.history-status {
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.history-date {
+  margin-left: auto;
+}
+
+.no-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  color: #64748b;
+  text-align: center;
+}
+
+.no-history svg {
+  margin-bottom: 15px;
+}
+
+.no-history p {
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Request Loading */
+.request-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  border: 1px dashed #cbd5e1;
+}
+
+.request-loading p {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Scrollbar styling */
+.history-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.history-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .available-rides-container {
+    padding: 20px 15px;
+  }
+  
+  h2 {
+    font-size: 26px;
+  }
+  
+  .booking-form {
+    padding: 20px;
+  }
+  
+  .progress-steps {
+    margin: 0 10px;
+  }
+  
+  .progress-title {
+    font-size: 11px;
+    max-width: 70px;
+  }
+  
+  .confirmation-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .confirmation-buttons button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  .progress-steps {
+    margin: 0 5px;
+  }
+  
+  .progress-title {
+    display: none;
+  }
+  
+  .progress-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .ride-status {
+    padding: 20px;
+  }
+}

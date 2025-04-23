@@ -1,0 +1,78 @@
+.vehicle-selection-container {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Vehicle List */
+.vehicle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Vehicle Item */
+.vehicle-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, border 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.vehicle-item:hover {
+  transform: scale(1.05);
+}
+
+/* Selected Vehicle - Highlight with Border */
+.vehicle-item.selected {
+  border: 3px solid #007bff;
+  background-color: #e3f2fd;
+  font-weight: bold;
+}
+
+/* Vehicle Images */
+.vehicle-item img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Vehicle Name */
+.vehicle-item p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Next Button */
+.next-button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+/* Disabled State */
+.next-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.next-button:hover:not(:disabled) {
+  background: #0056b3;
+}

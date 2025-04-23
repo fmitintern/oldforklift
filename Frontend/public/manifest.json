@@ -1,0 +1,9 @@
+{
+  "name": "Forklift Booking App",
+  "short_name": "ForkliftApp",
+  "description": "A PWA for booking and tracking forklifts",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff"
+}

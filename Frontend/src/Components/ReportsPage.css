@@ -1,0 +1,98 @@
+/* ReportsPage.css */
+.reports-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f9f9f9, #e3f2fd);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.reports-table {
+  width: 90%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reports-table th,
+.reports-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.reports-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.reports-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status-badge.pending {
+  background-color: #FFD700;
+  color: #000;
+}
+
+.status-badge.accepted {
+  background-color: #90EE90;
+  color: #000;
+}
+
+.status-badge.completed {
+  background-color: #32CD32;
+  color: #000;
+}
+
+.status-badge.rejected {
+  background-color: #FF6347;
+  color: #000;
+}
+
+/* Vehicle Type Badges */
+.vehicle-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.vehicle-badge.forklift {
+  background-color: #4b9cd3;
+  color: white;
+}
+
+.vehicle-badge.crane {
+  background-color: #8a2be2;
+  color: white;
+}
+
+.vehicle-badge.cherry-picker {
+  background-color: #ff69b4;
+  color: white;
+}
